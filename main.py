@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     # Loop though all the selected files
     for f in ipynb_file_names:
-        # We already know that the notebook exists as we used the file dialog to open it
+        # We already know that the notebook exists as we used the file dialog to get its name
         # Read the notebook keeping the structure
         notebook_file = open(f, 'r')
         notebook_content = nbformat.read(notebook_file, nbformat.NO_CONVERT)

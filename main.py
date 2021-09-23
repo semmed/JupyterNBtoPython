@@ -61,10 +61,13 @@ if __name__ == '__main__':
 
         py_file = open(py_file_name, 'w')
         for code_line in code_lines:
+            # Ignore lines that contain the string '%load_ext autoreload'
             if '%load_ext autoreload' in code_line:
                 continue
+            # Ignore lines that contain the string '%autoreload 2'
             if '%autoreload 2' in code_line:
                 continue
+            # Ignore lines that contain the string '%matplotlib inline'
             if '%matplotlib inline' in code_line:
                 continue
             py_file.write(code_line + '\n')

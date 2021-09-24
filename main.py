@@ -23,7 +23,7 @@ if __name__ == '__main__':
     # Get the file names from a file dialog
     ipynb_file_names = filedialog.askopenfilenames(filetypes=(("Jupyter Notebooks", "*.ipynb"), ("All files", "*.*")))
 
-    # Loop though all the selected files
+    # Loop through all the selected files
     for f in ipynb_file_names:
         # We already know that the notebook exists as we used the file dialog to get its name
         # Read the notebook keeping the structure
@@ -51,7 +51,7 @@ if __name__ == '__main__':
         # Open the output file for writing - but only if it does not already exists
         if Path(py_file_name).exists():
             # Warn the user
-            warning = "A file by the name " + py_file_name + "exists, please select another filename"
+            warning = "A file by the name " + py_file_name + " exists, please select another filename"
             messagebox.showwarning(title=None, message=warning)
             # Allow the user to enter a different file name (the user may opt to use the same and will receive another
             # warning
